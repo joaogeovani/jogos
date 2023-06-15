@@ -9,9 +9,16 @@ chuteUsuario = input("Digite o seu número: ")
 print("Você digitou: ", chuteUsuario)
 chuteInt = int(chuteUsuario)
 
-if (numeroComputador == chuteInt):
+acertou = chuteInt == numeroComputador
+maior = chuteInt > numeroComputador
+menor = chuteInt < numeroComputador
+
+if (acertou):
     print("Você acertou o número!")
 else:
-    print("Você errou o número!")
+    if(maior):
+        print("Você errou! O número é maior.")
+    elif(menor):
+        print("Você errou! o número é menor.")
 
 print("Fim do jogo")
