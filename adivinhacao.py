@@ -4,21 +4,29 @@ print("Adivinhe o número")
 print("*****************")
 
 numeroComputador = 47
+tentativasMaximas = 3
 
-chuteUsuario = input("Digite o seu número: ")
-print("Você digitou: ", chuteUsuario)
-chuteInt = int(chuteUsuario)
+for rodada in range(1, tentativasMaximas +1):
+    print("Tentativa {} de {}".format(rodada, tentativasMaximas))
+    chuteUsuario = input("Digite um número entre 1 e 100: ")
+    print("Você digitou: ", chuteUsuario)
+    chuteInt = int(chuteUsuario)
 
-acertou = chuteInt == numeroComputador
-maior = chuteInt > numeroComputador
-menor = chuteInt < numeroComputador
+    if (chuteInt < 1 or chuteInt > 100):
+        print("Você deve digitar um número entre 1 e 100!")
+        continue
 
-if (acertou):
-    print("Você acertou o número!")
-else:
-    if(maior):
-        print("Você errou! O número é maior.")
-    elif(menor):
-        print("Você errou! o número é menor.")
+    acertou = chuteInt == numeroComputador
+    maior = chuteInt > numeroComputador
+    menor = chuteInt < numeroComputador
+
+    if (acertou):
+        print("Você acertou o número!")
+        break
+    else:
+        if (maior):
+            print("Você errou! O número é maior.")
+        elif (menor):
+            print("Você errou! o número é menor.")
 
 print("Fim do jogo")
