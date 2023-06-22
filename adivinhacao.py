@@ -55,3 +55,6 @@ def jogoDaAdivinhacao():
                 print("O número secreto era {}. Você fez {} pontos".format(numeroComputador, pontos))
 
     print("Fim do jogo")
+
+if (__name__ == "__main__"):
+    jogoDaAdivinhacao()

@@ -5,3 +5,6 @@ def jogoDaForca():
     print("**************************")
 
     print("Fim do jogo")
+
+if (__name__ == "__main__"):
+    jogoDaForca()
